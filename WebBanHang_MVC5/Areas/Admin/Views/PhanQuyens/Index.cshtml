@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Ictshop.Models.PhanQuyen>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-xl-center">Quản lý Quyền truy cập</h2>
+
+<p>
+    @*<button class="btn btn-success btn-sm border-dark">
+        <i class="fas fa-plus-circle"></i> @Html.ActionLink("Thêm mới quyền", "Create")</button>*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Tên Quyền
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.IDQuyen)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenQuyen)
+    </td>
+    <td>
+        <button class="btn btn-warning btn-sm">@Html.ActionLink("Sửa", "Edit", new { id = item.IDQuyen })</button>  |
+        <button class="btn btn-info btn-sm">@Html.ActionLink("Chi tiết", "Details", new { id = item.IDQuyen })</button>  |
+        <button class="btn btn-danger btn-sm">@Html.ActionLink("Xoá", "Delete", new { id = item.IDQuyen })</button>
+
+
+      
+     
+     
+    </td>
+</tr>
+}
+
+</table>

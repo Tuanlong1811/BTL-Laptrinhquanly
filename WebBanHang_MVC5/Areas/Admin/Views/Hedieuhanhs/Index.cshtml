@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Ictshop.Models.Hedieuhanh>
+
+@{ ViewBag.Title = "Index";
+                Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml"; }
+
+<h2 class="text-xl-center">Quản lý Hệ điều hành </h2>
+
+<p>
+    <button class="btn btn-success btn-sm border-dark">
+        <i class="fas fa-plus-circle"></i>@Html.ActionLink("Thêm mới", "Create")
+    </button>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Mã hệ điều hành
+        </th>
+        <th>
+            Tên hệ điều hành
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mahdh)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tenhdh)
+    </td>
+    <td>
+        <button class="btn btn-warning btn-sm">@Html.ActionLink("Sửa", "Edit", new { id = item.Mahdh })</button>  |
+        <button class="btn btn-info btn-sm">@Html.ActionLink("Chi tiết", "Details", new { id = item.Mahdh })</button>  |
+        <button class="btn btn-danger btn-sm">@Html.ActionLink("Xóa", "Delete", new { id = item.Mahdh })</button>
+      
+      
+      
+    </td>
+</tr>}
+
+</table>

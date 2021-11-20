@@ -1,0 +1,57 @@
+﻿@{ ViewBag.Title = "Shop Điện thoại"; }
+
+
+<br />
+<div class="row">
+    <div class="col-md-8">
+        <img class="img-responsive" src="~/Images/slider_1.jpg" />
+    </div>
+    <div class="col-md-4">
+        <img src="~/Images/qc3.gif" class="img-responsive" alt="" />
+        <p><a class="btn btn-default" href="#">Xem thêm... &raquo;</a></p>
+    </div>
+</div>
+<div>
+    <img class="img-responsive" src="~/Images/slide2.jpg" />
+</div>
+<br />
+<div class="spnoibat">
+    <div class="row">
+
+        <h3> Sản phẩm Hot !!!</h3>
+        <div class="col-md-4">
+            <img src="~/Images/sap1.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/Images/sap2.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/Images/sap3.jpg" class="img-responsive" alt="" />
+        </div>
+    </div>
+</div>
+
+<div class="dt">
+
+    @Html.Action("dtiphonePartial", "Sanpham")
+</div>
+<div class="dt">
+
+    @Html.Action("dtsamsungpartial", "Sanpham")
+</div>
+<div class="dt">
+
+    @Html.Action("dtxiaomipartial", "Sanpham")
+</div>
+
+   
+<div class="row">
+    <h2> Tin tức sản phẩm</h2>
+    <div class="col-md-8">
+        Video
+    </div>
+    <div class="col-md-4">
+        Tin tức
+    </div>
+</div>
+

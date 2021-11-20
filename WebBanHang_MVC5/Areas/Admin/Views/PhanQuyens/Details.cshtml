@@ -1,0 +1,27 @@
+﻿@model Ictshop.Models.PhanQuyen
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-xl-center">Chi tiết phân quyền</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Tên quyền
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenQuyen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button class="btn btn-success">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IDQuyen })</button> |
+    <button class="btn btn-success">@Html.ActionLink("Back to List", "Index")</button>
+</p>
